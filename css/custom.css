@@ -438,6 +438,10 @@ a:focus{
 	background: linear-gradient(#f33101, #f38e0b);
 }
 
+.btn-github{
+	background: linear-gradient(#1b1b1b, #555555);
+}
+
 .btn-android{
 	background: #f39301;
 	background: linear-gradient(#f39301,#fed30a);
