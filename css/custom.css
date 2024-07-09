@@ -25,6 +25,8 @@
 17. Media Screens
 -------------------------------------------------------------------------------------- */
 
+
+
 /************************************/
 /***** 	   01. General css		 ****/
 /************************************/
@@ -81,8 +83,18 @@ a:focus{
 	bottom: 0;
 	background: var(--main-color);
 	z-index: 9999;
+	display: flex; 
+    justify-content: center;
+    align-items: center;
 }
-
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
 .sk-wave{
 	width: 50px;
 	height: 40px;
@@ -95,6 +107,12 @@ a:focus{
 	margin-left: -25px;
 }
 
+.preloader h1 {
+    animation: fadeInOut 2s ease-in-out infinite;
+	color: #fff;
+	font-weight: bold;
+	font-size: 50px;
+}
 .sk-wave .sk-rect{
 	background-color: #fff;
 	height: 100%;
@@ -518,17 +536,18 @@ a:focus{
 .section-title h2:before{
 	content: '';
 	display: block;
-	width: 34px;
+	width: 50px;
 	height: 2px;
 	background: var(--main-color);
 	position: absolute;
 	top: 0;
 	left: 50%;
 	margin-left: -17px;
+	
 }
 
 .section-title p{
-	color: #a5a3a3;
+	color: #000000;
 	font-size: 14px;
 	line-height: 1.5em;
 }
@@ -578,7 +597,7 @@ a:focus{
 }
 
 .video-entry p{
-	color: #8a8a8d;
+	color: #272727;
 	font-size: 14px;
 	line-height: 1.8em;
 	margin-bottom: 1.8em;
@@ -732,7 +751,7 @@ a:focus{
 
 .feature-single p{
 	font-size: 14px;
-	color: #a5a3a3;
+	color: #0e0e0e;
 	line-height: 1.5em;
 	font-weight: 300;
 }
@@ -751,6 +770,10 @@ a:focus{
 
 .feature-blue h4{
 	color: #52a2f9;
+}
+
+.feature-orange h4{
+	color: var(--main-color)
 }
 
 /*************************************/
@@ -1131,6 +1154,13 @@ a:focus{
 	background: #e22a2a;
 }
 
+.fs-whatsapp.follow-social-single:hover{
+	border-color: #008000 ;
+}
+
+.fs-whatsapp.follow-social-single a{
+	background: #008000 }
+
 .fs-twitter.follow-social-single:hover{
 	border-color: #33afef;
 }
@@ -1140,7 +1170,7 @@ a:focus{
 }
 
 .follow-social-single a:hover{
-	background: #1a1a1a;
+	background: var(--main-color);
 }
 
 /*******************************************/
@@ -1202,15 +1232,15 @@ a:focus{
 	border-radius: 30px;
 	margin-top: 20px;
 	background: #ee3e86;
-    background: linear-gradient(to top, #ee3e86,#fa5b77);
-    background: -webkit-linear-gradient(to top, #ee3e86,#fa5b77);
-    background: -moz-linear-gradient(to top, #ee3e86,#fa5b77);
-    background: -o-linear-gradient(to top, #ee3e86,#fa5b77);
+    background: linear-gradient(to top, var(--main-color),#fd6005);
+    background: -webkit-linear-gradient(to top, var(--main-color),#fd6005);
+    background: -moz-linear-gradient(to top, var(--main-color),#fd6005);
+    background: -o-linear-gradient(to top, var(--main-color),#fd6005);
 }
 
 .btn-contact:focus,
 .btn-contact:hover{
-	background: #ee3e86;
+	background: var(--main-color);
 	box-shadow: none;
 	outline: 0;
 }
